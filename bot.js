@@ -25,49 +25,42 @@ function respond() {
   if(request.text && botRegex2.test(request.text)){
   	responseID = 2;
   	this.res.writeHead(200);
-  	postMessage();
   	this.res.end();
   } 
 
   if(request.text && botRegex3.test(request.text)){
   	responseID = 3;
   	this.res.writeHead(200);
-  	postMessage();
   	this.res.end();
   } 
 
   if(request.text && botRegex4.test(request.text)){
   	responseID = 4;
   	this.res.writeHead(200);
-  	postMessage();
   	this.res.end();
   } 
 
   if(request.text && botRegex5.test(request.text)){
   	responseID = 5;
   	this.res.writeHead(200);
-  	postMessage();
   	this.res.end();
   } 
 
   if(request.text && botRegex6.test(request.text)){
   	responseID = 6;
   	this.res.writeHead(200);
-  	postMessage();
   	this.res.end();
   } 
 
   if(request.text && botRegex7.test(request.text)){
   	responseID = 7;
   	this.res.writeHead(200);
-  	postMessage();
   	this.res.end();
   } 
 
   if(request.text && botRegex8.test(request.text)){
   	responseID = 8;
   	this.res.writeHead(200);
-  	postMessage();
   	this.res.end();
   } 
 

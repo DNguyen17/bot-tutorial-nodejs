@@ -17,12 +17,16 @@ function respond() {
       botRegex8 = /snow/;
 
 
+  console.log(request);
+  
   if(request.sender_type == "bot") {
   	responseID = 0;
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
   }
+   
+  console.log
 
   if(request.text && botRegex.test(request.text)) {
   	responseID = 1;
@@ -96,7 +100,7 @@ function postMessage() {
   }
 
   else if (responseID == 2) {
-  	botResponse = "But no one is as sassy as Austin";
+  	botResponse = "But not as much as Austin";
   }
 
   else if (responseID == 3 || responseID == 4) {
@@ -108,7 +112,7 @@ function postMessage() {
   }
 
   else if(responseID == 6) {
-  	botResponse = "We do not speak of MLH here";
+  	botResponse = "We do not speak of them here";
   }
 
   else if (responseID == 7) {

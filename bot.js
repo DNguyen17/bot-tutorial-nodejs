@@ -5,7 +5,7 @@ var responseID = 0;
 
 var botID = process.env.BOT_ID;
 
-var names = ["Logan", "Danh", "Jorge", "Morgan", "Gavin", "Austin", "Eric", "Brandon", "Edward"];
+//var names = ["Logan", "Danh", "Jorge", "Morgan", "Gavin", "Austin", "Eric", "Brandon", "Edward"];
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),

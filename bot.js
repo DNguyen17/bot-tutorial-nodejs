@@ -111,7 +111,7 @@ function postMessage() {
 
   else if (responseID == 5) {
   	var whositgonnabe = Math.floor(Math.random() * 9);
-  	botResponse = names[whositgonnabe];
+  	botResponse = "I blame "+names[0];
   }
 
   else if(responseID == 6) {

@@ -109,7 +109,7 @@ function postMessage() {
   }
 
   else if (responseID == 5) {
-  	botResponse = names[Math.floor(Math.random()*names.length)];
+  	botResponse = "I blame "+names[Math.floor(Math.random()*names.length)];
   }
 
   else if(responseID == 6) {

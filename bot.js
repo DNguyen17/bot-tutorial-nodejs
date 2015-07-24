@@ -110,6 +110,8 @@ function postMessage() {
   	botReponse = "Brace yourselves. Winter is coming.";
   }
 
+  responseID = 0;
+
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',

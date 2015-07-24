@@ -75,7 +75,6 @@ function respond() {
   	responseID = 0;
     console.log("don't care");
     this.res.writeHead(200);
-    postMessage();
     this.res.end();
   }
 }

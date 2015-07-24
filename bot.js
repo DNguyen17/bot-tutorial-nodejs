@@ -8,13 +8,13 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /swiggity/,
-      botRegex2 = /(sas)|(Sas)/,
-      botRegex3 = /(do you have my shirt?)|(do you have my shirt)|(is my shirt here?)|(is my shirt here)|(are the shirts here?)|(are the shirts here)|(do we have shirts?)|(do we have shirts)/,
-      botRegex4 = /(is the wifi working?)|(Is the WIFI working?)|(is the WIFI working?)/,
+      botRegex2 = /([sS]as)/,
+      botRegex3 = /(do you have my shirt?*)|(is my shirt here?*)|(are the shirts here?*)|(do we have shirts?*)/,
+      botRegex4 = /[iI]s the ((wifi)|(WIFI)) working\?*/,
       botRegex5 = /(broke)|(fail)|(doesn't work)|(not work)/,
       botRegex6 = /(mlh)|(MLH)|(Major League Hacking)|(major league hacking)/,
-      botRegex7 = /stickers/,
-      botRegex8 = /snow/;
+      botRegex7 = /(stickers)/,
+      botRegex8 = /(snow)/;
 
 
   console.log(request);

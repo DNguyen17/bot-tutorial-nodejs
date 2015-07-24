@@ -7,14 +7,14 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /swiggity/,
+      botRegex = /[Ss]wiggity/,
       botRegex2 = /([sS]as)/,
+      botRegex7 = /([Ss]tickers)/,
+      botRegex8 = /([Ss]now)/,
       botRegex3 = /(do you have my shirt)|(is my shirt here)|(are the shirts here)|(do we have shirts)/,
       botRegex4 = /[iI]s the ((wifi)|(WIFI)) working/,
       botRegex5 = /(broke)|(fail)|(doesn't work)|(not work)/,
-      botRegex6 = /(mlh)|(MLH)|(Major League Hacking)|(major league hacking)/,
-      botRegex7 = /(stickers)/,
-      botRegex8 = /(snow)/;
+      botRegex6 = /(mlh)|(MLH)|(Major League Hacking)|(major league hacking)/;
 
 
   console.log(request);

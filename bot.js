@@ -15,6 +15,15 @@ function respond() {
       botRegex6 = /(mlh)|(MLH)|(Major League Hacking)|(major league hacking)/,
       botRegex7 = /stickers/,
       botRegex8 = /snow/;
+
+
+  if(request.sender_type == "bot") {
+  	responseID = 0;
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+
   if(request.text && botRegex.test(request.text)) {
   	responseID = 1;
     this.res.writeHead(200);

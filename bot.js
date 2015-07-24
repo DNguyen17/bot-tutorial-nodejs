@@ -109,7 +109,7 @@ function postMessage() {
   }
 
   else if (responseID == 5) {
-  	botResponse = "I blame Logan...";
+  	botResponse = names[0];
   }
 
   else if(responseID == 6) {

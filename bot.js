@@ -5,6 +5,8 @@ var responseID = 0;
 
 var botID = process.env.BOT_ID;
 
+var names = ["Logan", "Danh", "Jorge", "Morgan", "Gavin", "Austin", "Eric", "Brandon", "Edward"];
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /swiggity/,
@@ -12,9 +14,9 @@ function respond() {
       botRegex3 = /(do you have my shirt?*)|(is my shirt here?*)|(are the shirts here?*)|(do we have shirts?*)/,
       botRegex4 = /[iI]s the ((wifi)|(WIFI)) working\?*/,
       botRegex5 = /(broke)|(fail)|(doesn't work)|(not work)/,
-      botRegex6 = /(mlh)|(MLH)|(Major League Hacking)|(major league hacking)/,
+      botRegex6 = /(mlh)|(MLH)|([Mm]ajor [Ll]eague [Hh]acking)/,
       botRegex7 = /(stickers)/,
-      botRegex8 = /(snow)/;
+      botRegex8 = /([sS]now)/;
 
 
   console.log(request);
@@ -108,7 +110,8 @@ function postMessage() {
   }
 
   else if (responseID == 5) {
-  	botResponse = "I blame Logan...";
+  	var whositgonnabe = Math.floor(Math.random() * 9);
+  	botResponse = "I blame "+names[whositgonnabe];
   }
 
   else if(responseID == 6) {

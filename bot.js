@@ -13,7 +13,7 @@ function respond() {
       botRegex8 = /([Ss]now)/,
       botRegex3 = /(do you have my shirt)|(is my shirt here)|(are the shirts here)|(do we have shirts)/,
       botRegex4 = /[iI]s the ((wifi)|(WIFI)) working/,
-      botRegex5 = /(broke)|(fail)|(doesn't work)|(not work)/,
+      botRegex5 = /([Bb]roke)|([Ff]ail)|(doesn't work)|(not work)/,
       botRegex6 = /(mlh)|(MLH)|(Major League Hacking)|(major league hacking)/;
 
 
@@ -94,7 +94,7 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
-  var names = ["Morgan", "Logan", "Danh", "Edward", "Austin", "Jorge", "Gavin", "Eric", "Brandon"];
+  var names = ["Morgan Monzingo", "Logan Dorsey", "Danh Nguyen", "Edward Li", "Austin C Wells", "Jorge Valdez", "Gavin Pham", "Eric Straw", "Brandon"];
 
   if (responseID == 1) {
   	botResponse = "swooty"; //cool();
@@ -109,7 +109,7 @@ function postMessage() {
   }
 
   else if (responseID == 5) {
-  	botResponse = "I blame "+names[Math.floor(Math.random()*names.length)];
+  	botResponse = "I blame @"+names[Math.floor(Math.random()*names.length)];
   }
 
   else if(responseID == 6) {

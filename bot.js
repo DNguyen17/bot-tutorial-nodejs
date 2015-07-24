@@ -94,6 +94,7 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
+  var names = ["Morgan", "Logan", "Danh", "Edward", "Austin", "Jorge", "Gavin", "Eric", "Brandon"];
 
   if (responseID == 1) {
   	botResponse = "swooty"; //cool();

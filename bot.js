@@ -14,20 +14,19 @@ function respond() {
       botRegex5 = /([Bb]roke)|([Ff]ail)|(([Dd]oesn't)|([Nn]ot) [Ww]ork)/,
       botRegex6 = /(mlh)|(MLH)|([mM]ajor [Ll]eague [Hh]acking)/,
       botRegex7 = /[Ss]tickers/,
-      botRegex8 = /[Ss]now/;
+      botRegex8 = /[Ss]now/,
+      botRegex9 = /[Mm]ade ((it)|(th((is)|(at))))/;
 
 
   console.log(request);
   
   if(request.sender_type == "bot") {
-  	responseID = 0;
-    console.log("don't care");
+  	responseID = -1;
     this.res.writeHead(200);
+    postMessage();
     this.res.end();
   }
    
-  console.log
-
   if(request.text && botRegex.test(request.text)) {
   	responseID = 1;
     this.res.writeHead(200);
@@ -35,54 +34,61 @@ function respond() {
     this.res.end();
   } 
 
-  if(request.text && botRegex2.test(request.text)){
+  else if(botRegex2.test(request.text)){
   	responseID = 2;
   	this.res.writeHead(200);
   	postMessage();
   	this.res.end();
   } 
 
-  if(request.text && botRegex3.test(request.text)){
+  else if(botRegex3.test(request.text)){
   	responseID = 3;
   	this.res.writeHead(200);
   	postMessage();
   	this.res.end();
   } 
 
-  if(request.text && botRegex4.test(request.text)){
+  else if(botRegex4.test(request.text)){
   	responseID = 4;
   	this.res.writeHead(200);
   	postMessage();
   	this.res.end();
   } 
 
-  if(request.text && botRegex5.test(request.text)){
+  else if(botRegex5.test(request.text)){
   	responseID = 5;
   	this.res.writeHead(200);
   	postMessage();
   	this.res.end();
   } 
 
-  if(request.text && botRegex6.test(request.text)){
+  else if(botRegex6.test(request.text)){
   	responseID = 6;
   	this.res.writeHead(200);
   	postMessage();
   	this.res.end();
   } 
 
-  if(request.text && botRegex7.test(request.text)){
+  else if(botRegex7.test(request.text)){
   	responseID = 7;
   	this.res.writeHead(200);
   	postMessage();
   	this.res.end();
   } 
 
-  if(request.text && botRegex8.test(request.text)){
+  else if(botRegex8.test(request.text)){
   	responseID = 8;
   	this.res.writeHead(200);
   	postMessage();
   	this.res.end();
   } 
+  
+  else if (botRegex9.test(request.text)) {
+    responseID = 9;
+    this.res.writeHead(200);
+    postMessage();
+    this.res.end();
+  }
 
   else {
   	responseID = 0;
@@ -96,8 +102,12 @@ function postMessage() {
   var botResponse, options, body, botReq;
   var names = ["Morgan Monzingo", "Logan Dorsey", "Danh Nguyen", "Edward Li", "Austin C Wells", "Jorge Valdez", "Gavin Pham", "Eric Straw", "Brandon"];
 
+  if (responseID == -1) {
+    botResponse == "i wrote this";
+  }
+  
   if (responseID == 1) {
-  	botResponse = "swooty"; //cool();
+  	botResponse = "swooty"; 
   }
 
   else if (responseID == 2) {
@@ -122,6 +132,10 @@ function postMessage() {
 
   else if (responseID == 8) {
   	botResponse = "Brace yourselves. Winter is coming.";
+  }
+  
+  else if (responseID == 9) {
+    botResponse = "No, I made this";
   }
 
   responseID = 0;

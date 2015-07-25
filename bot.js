@@ -117,11 +117,11 @@ function postMessage() {
   }
 
   else if (responseID == 7) {
-  	botReponse = "I LOVE STICKERS SO MUCH OMG";
+  	botResponse = "I LOVE STICKERS SO MUCH OMG";
   }
 
   else if (responseID == 8) {
-  	botReponse = "Brace yourselves. Winter is coming.";
+  	botResponse = "Brace yourselves. Winter is coming.";
   }
 
   responseID = 0;

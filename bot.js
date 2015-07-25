@@ -1,13 +1,12 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var responseID = 0;
-var request;
 
 var botID = process.env.BOT_ID;
 
 function respond() {
-      request = JSON.parse(this.req.chunks[0]);
-  var botRegex = /[Ss]wiggity/,
+  var request = JSON.parse(this.req.chunks[0]),
+      botRegex = /[Ss]wiggity/,
       botRegex2 = /([sS]as)/,
       botRegex3 = /(do ((you)|(we)) have( my)* shirts*)|(is my shirt here)|(are the shirts here)/,
       botRegex4 = /[iI]s the ([wW][Ii]-{0,1}[Ff][Ii]) working/,
@@ -15,8 +14,7 @@ function respond() {
       botRegex6 = /(mlh)|(MLH)|([mM]ajor [Ll]eague [Hh]acking)/,
       botRegex7 = /[Ss]tickers/,
       botRegex8 = /[Ss]now/,
-      botRegex9 = /[Mm]ade th((is)|(at))/,
-      botRegex10 = /show yourself/;
+      botRegex9 = /[Mm]ade ((it)|((is)|(at)))/;
 
    
   if(request.text && botRegex.test(request.text)) {
@@ -75,7 +73,7 @@ function respond() {
   	this.res.end();
   } 
   
-  else if (botRegex9.test(request.text)) {
+  else if (botRegex9.test(request.text) && request.sender_type != "bot") {
     responseID = 9;
     this.res.writeHead(200);
     postMessage();

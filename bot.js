@@ -102,7 +102,7 @@ function postMessage() {
   var names = ["Morgan Monzingo", "Logan Dorsey", "Danh Nguyen", "Edward Li", "Austin C Wells", "Jorge Valdez", "Gavin Pham", "Eric Straw", "Brandon"];
 
   if (responseID == -1) {
-    botResponse = JSON.stringify(request);
+    botResponse = request.sender_type;
   }
   
   if (responseID == 1) {

@@ -18,13 +18,6 @@ function respond() {
       botRegex9 = /[Mm]ade th((is)|(at))/,
       botRegex10 = /show yourself/;
 
-
-  if(request.text && botRegex10.test(request.text)) {
-  	responseID = -1;
-    this.res.writeHead(200);
-    postMessage();
-    this.res.end();
-  }
    
   if(request.text && botRegex.test(request.text)) {
   	responseID = 1;
@@ -33,7 +26,7 @@ function respond() {
     this.res.end();
   } 
 
-  else if(botRegex2.test(request.text)){
+  else if(botRegex2.test(request.text) && request.sender_type != "bot"){
   	responseID = 2;
   	this.res.writeHead(200);
   	postMessage();
@@ -100,17 +93,13 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
   var names = ["Morgan Monzingo", "Logan Dorsey", "Danh Nguyen", "Edward Li", "Austin C Wells", "Jorge Valdez", "Gavin Pham", "Eric Straw", "Brandon"];
-
-  if (responseID == -1) {
-    botResponse = request.sender_type;
-  }
   
   if (responseID == 1) {
   	botResponse = "swooty"; 
   }
 
   else if (responseID == 2) {
-  	botResponse = "But not as much as Austin";
+  	botResponse = "But not as sassy as Austin";
   }
 
   else if (responseID == 3 || responseID == 4) {

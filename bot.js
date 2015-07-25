@@ -1,13 +1,13 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var responseID = 0;
-
+var request;
 
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /[Ss]wiggity/,
+      request = JSON.parse(this.req.chunks[0]);
+  var botRegex = /[Ss]wiggity/,
       botRegex2 = /([sS]as)/,
       botRegex3 = /(do ((you)|(we)) have( my)* shirts*)|(is my shirt here)|(are the shirts here)/,
       botRegex4 = /[iI]s the ([wW][Ii]-{0,1}[Ff][Ii]) working/,
@@ -15,12 +15,11 @@ function respond() {
       botRegex6 = /(mlh)|(MLH)|([mM]ajor [Ll]eague [Hh]acking)/,
       botRegex7 = /[Ss]tickers/,
       botRegex8 = /[Ss]now/,
-      botRegex9 = /[Mm]ade th((is)|(at))/;
+      botRegex9 = /[Mm]ade th((is)|(at))/,
+      botRegex10 = /show yourself/;
 
 
-  console.log(request);
-  
-  if(request.sender_type == "bot") {
+  if(request.text && botRegex10.test(request.text)) {
   	responseID = -1;
     this.res.writeHead(200);
     postMessage();
@@ -103,7 +102,7 @@ function postMessage() {
   var names = ["Morgan Monzingo", "Logan Dorsey", "Danh Nguyen", "Edward Li", "Austin C Wells", "Jorge Valdez", "Gavin Pham", "Eric Straw", "Brandon"];
 
   if (responseID == -1) {
-    botResponse == "i wrote this";
+    botResponse == request;
   }
   
   if (responseID == 1) {

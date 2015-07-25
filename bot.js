@@ -15,7 +15,7 @@ function respond() {
       botRegex6 = /(mlh)|(MLH)|([mM]ajor [Ll]eague [Hh]acking)/,
       botRegex7 = /[Ss]tickers/,
       botRegex8 = /[Ss]now/,
-      botRegex9 = /[Mm]ade ((it)|(th((is)|(at))))/;
+      botRegex9 = /[Mm]ade th((is)|(at))/;
 
 
   console.log(request);
@@ -135,7 +135,7 @@ function postMessage() {
   }
   
   else if (responseID == 9) {
-    botResponse = "No, I made this";
+    botResponse = "No, I made it";
   }
 
   responseID = 0;

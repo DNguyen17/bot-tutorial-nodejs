@@ -12,7 +12,7 @@ function respond() {
       botRegex7 = /([Ss]tickers)/,
       botRegex8 = /([Ss]now)/,
       botRegex3 = /(do you have my shirt)|(is my shirt here)|(are the shirts here)|(do we have shirts)/,
-      botRegex4 = /[iI]s the ((wifi)|(WIFI)) working/,
+      botRegex4 = /[iI]s the ([wW][Ii][Ff][Ii]) working/,
       botRegex5 = /([Bb]roke)|([Ff]ail)|(doesn't work)|(not work)/,
       botRegex6 = /(mlh)|(MLH)|(Major League Hacking)|(major league hacking)/;
 

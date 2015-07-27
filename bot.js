@@ -15,7 +15,7 @@ function respond() {
       botRegex6 = /(mlh)|(MLH)|([mM]ajor [Ll]eague [Hh]acking)/,
       botRegex7 = /[Ss]tickers/,
       botRegex8 = /[Ss]now/,
-      botRegex9 = /[Mm]ade ((it)|((is)|(at)))/,
+      botRegex9 = /[Mm]ade ((it)|(th(is)|(at)))/,
       botRegex10 = /[tT]he [bB]est/,
       botRegex11 = /[Bb]eep beep/;
 

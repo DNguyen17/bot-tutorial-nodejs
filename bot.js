@@ -16,7 +16,8 @@ function respond() {
       botRegex7 = /[Ss]tickers/,
       botRegex8 = /[Ss]now/,
       botRegex9 = /[Mm]ade ((it)|((is)|(at)))/,
-      botRegex10 = /[tT]he [bB]est/;
+      botRegex10 = /[tT]he [bB]est/,
+      botRegex11 = /[Bb]eep beep/;
 
    
   if(request.text && botRegex.test(request.text)) {
@@ -88,6 +89,13 @@ function respond() {
     postMessage();
     this.res.end();
   }
+  
+  else if (botRegex11.test(request.text) && request.sender_type != "bot") {
+    responseID = 11;
+    this.res.writeHead(200);
+    postMessage();
+    this.res.end();
+  }
 
   else {
   	responseID = 0;
@@ -135,6 +143,10 @@ function postMessage() {
   
   else if (responseID == 10) {
     botResponse = "No, you're the best "+request.name;
+  }
+  
+  else if (responseID == 11) {
+    botResponse = "Don't touch that button!";
   }
 
   responseID = 0;

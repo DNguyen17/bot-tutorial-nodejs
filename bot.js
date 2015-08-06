@@ -11,7 +11,7 @@ function respond() {
       botRegex2 = /([sS]as)/,
       botRegex3 = /(do ((you)|(we)) have( my)* shirts*)|(is my shirt here)|(are the shirts here)/,
       botRegex4 = /[iI]s the ([wW][Ii]-{0,1}[Ff][Ii]) working/,
-      botRegex5 = /([Bb]roke)|([Ff]ail)|(([Dd]oesn't)|([Nn]ot) [Ww]ork)/,
+      botRegex5 = /([Bb]roke)|([Ff]ail)|((([Dd]oesn't)|([Nn]ot)) [Ww]ork)/,
       botRegex6 = /(mlh)|(MLH)|([mM]ajor [Ll]eague [Hh]acking)/,
       botRegex7 = /[Ss]tickers/,
       botRegex8 = /[Ss]now/,

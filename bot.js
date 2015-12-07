@@ -107,14 +107,10 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
-  var names = ["Morgan Monzingo", "Logan Dorsey", "Danh Nguyen", "Edward Li", "Austin C Wells", "Jorge Valdez", "Gavin Pham", "Eric Straw", "Brandon"];
+  var names = ["Nick Roberts", "Spencer Clapes", "Danh Nguyen", "Steven Bock", "JD Francis", "Josh Thomas", "Caleb Kyle"];
   
   if (responseID == 1) {
   	botResponse = "swooty"; 
-  }
-
-  else if (responseID == 2) {
-  	botResponse = "But not as sassy as Austin";
   }
 
   else if (responseID == 3 || responseID == 4) {
@@ -125,17 +121,6 @@ function postMessage() {
   	botResponse = "I blame @"+names[Math.floor(Math.random()*names.length)];
   }
 
-  else if(responseID == 6) {
-  	botResponse = "We do not speak of them here";
-  }
-
-  else if (responseID == 7) {
-  	botResponse = "I LOVE STICKERS SO MUCH OMG";
-  }
-
-  else if (responseID == 8) {
-  	botResponse = "Brace yourselves. Winter is coming.";
-  }
   
   else if (responseID == 9) {
     botResponse = "No, I made it";
@@ -145,9 +130,6 @@ function postMessage() {
     botResponse = "No, you're the best "+request.name;
   }
   
-  else if (responseID == 11) {
-    botResponse = "Don't touch that button!";
-  }
 
   responseID = 0;
 

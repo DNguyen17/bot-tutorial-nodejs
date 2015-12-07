@@ -107,7 +107,7 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
-  var names = ["Nick Roberts", "Spencer Clapes", "Danh Nguyen", "Steven Bock", "JD Francis", "Josh Thomas", "Caleb Kyle"];
+  var names = ["Nick Roberts", "Spencer Clapes", "Steven Bock", "JD Francis", "Josh Thomas", "Caleb Kyle"];
   
   if (responseID == 1) {
   	botResponse = "swooty"; 
